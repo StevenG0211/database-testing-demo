@@ -10,6 +10,10 @@ const db = new Pool({ connectionString: databaseUrl });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
+app.get('/', (_req, res) => {
+  res.redirect('/tasks');
+});
+
 app.get('/health', (_req, res) => {
   res.status(200).send('ok');
 });
