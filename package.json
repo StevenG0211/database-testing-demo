@@ -1,0 +1,27 @@
+{
+  "name": "database-testing-demo",
+  "version": "1.0.0",
+  "description": "Playwright E2E tests with PostgreSQL fixtures — seed, assert, and clean up in parallel",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "app": "tsx src/app.ts",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down -v",
+    "test:e2e": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui"
+  },
+  "dependencies": {
+    "express": "latest",
+    "pg": "latest"
+  },
+  "devDependencies": {
+    "@playwright/test": "latest",
+    "@types/express": "latest",
+    "@types/node": "latest",
+    "@types/pg": "latest",
+    "tsx": "latest",
+    "typescript": "latest"
+  }
+}
